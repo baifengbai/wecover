@@ -63,7 +63,7 @@ def create_canvas(size, color='white'):
     return Image.new('RGB', size, color)
 
 def load_font(font_size=50):
-    macfont = 'PingFang.ttc'
+    macfont = 'SourceHanSerifSC-Medium.otf'
     # heitifont = 'STHeiti Medium.ttc'
     winfont = 'msyh.ttc'
     # winfont = 'msyhbd.ttc'
@@ -86,7 +86,7 @@ def load_font(font_size=50):
         font = ImageFont.load_default()
     return font
 
-def makecover(title, logo=None, color='#000', bgcolor='#fff', logo_size=(120, 120), cover_height=400):
+def makecover(title, logo=None, color='#000', bgcolor='#fff', logo_size=(350, 350), cover_height=400):
     cover_width = round(cover_height * 2.35)
     cover_size = (cover_width, cover_height)
     print('cover size: {}*{}'.format(*cover_size))
@@ -101,8 +101,8 @@ def makecover(title, logo=None, color='#000', bgcolor='#fff', logo_size=(120, 12
         _warn_print('UnicodeEncodeError: 当前字体不支持中文')
         exit(-1)
     print('title size: {}*{}'.format(title_width, title_height))
-    title_y = round((cover_height - title_height)/2)
-    title_x = round((cover_width - title_width)/2)
+    title_y = round((cover_height - title_height)/2)-50
+    title_x = round((cover_width - title_width)/2)+50
 
      # 粘贴 LOGO
     if logo:
@@ -115,7 +115,7 @@ def makecover(title, logo=None, color='#000', bgcolor='#fff', logo_size=(120, 12
 
         logo_y = round((cover_height - logo_height)/2)
         logo_x = round((cover_width - all_width)/2)
-        logo_position = (logo_x, logo_y)
+        logo_position = (logo_x-80, logo_y)
         canvas.paste(logo, logo_position)
 
         title_x = logo_x + logo_width + gap
