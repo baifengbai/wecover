@@ -63,7 +63,7 @@ def create_canvas(size, color='white'):
     return Image.new('RGB', size, color)
 
 def load_font(font_size=50):
-    macfont = 'STFangsong'
+    macfont = 'STHeiti Medium.ttc'
     # heitifont = 'STHeiti Medium.ttc'
     winfont = 'msyh.ttc'
     # winfont = 'msyhbd.ttc'
