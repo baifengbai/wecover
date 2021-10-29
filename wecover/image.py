@@ -63,7 +63,7 @@ def create_canvas(size, color='white'):
     return Image.new('RGB', size, color)
 
 def load_font(font_size=50):
-    macfont = 'STFangsong.ttc'
+    macfont = 'STFangsong.ttf'
     # heitifont = 'STHeiti Medium.ttc'
     winfont = 'msyh.ttc'
     # winfont = 'msyhbd.ttc'
@@ -89,7 +89,7 @@ def load_font(font_size=50):
 def makecover(title, logo=None, color='#000', bgcolor='#fff', logo_size=(350, 350), cover_height=400):
     cover_width = round(cover_height * 2.35)
     cover_size = (cover_width, cover_height)
-    print('欢迎关注公众号Rstata，学习数据处理及可视化')
+    print('欢迎关注公众号，学习数据处理及可视化')
     print("""
 █████████████████████████████████████
 ████ ▄▄▄▄▄ █▄▄▄ ▀ ▀▄█▀▄▀ █ ▄▄▄▄▄ ████
